@@ -8,21 +8,105 @@
 
 /* Begin PBXBuildFile section */
 		0A3229032B2B484A006F4115 /* NitterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3229022B2B484A006F4115 /* NitterApp.swift */; };
-		0A3229052B2B484A006F4115 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3229042B2B484A006F4115 /* ContentView.swift */; };
 		0A3229072B2B484B006F4115 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3229062B2B484B006F4115 /* Assets.xcassets */; };
 		0A32290A2B2B484B006F4115 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3229092B2B484B006F4115 /* Preview Assets.xcassets */; };
+		0A3229122B2B4882006F4115 /* FeedKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0A3229112B2B4882006F4115 /* FeedKit */; };
+		0A3229142B2B4965006F4115 /* FeedParser+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3229132B2B4965006F4115 /* FeedParser+Async.swift */; };
+		0A3229162B2B4995006F4115 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3229152B2B4995006F4115 /* TimelineView.swift */; };
+		0A3229182B2B4A90006F4115 /* TimelineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3229172B2B4A90006F4115 /* TimelineViewModel.swift */; };
+		0A32291B2B2B5849006F4115 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 0A32291A2B2B5849006F4115 /* SwiftSoup */; };
+		0A32291F2B2B8029006F4115 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A32291E2B2B8029006F4115 /* SettingsView.swift */; };
+		0A3229212B2B809A006F4115 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3229202B2B809A006F4115 /* SettingsViewModel.swift */; };
+		0A3229252B2BA199006F4115 /* RichText in Frameworks */ = {isa = PBXBuildFile; productRef = 0A3229242B2BA199006F4115 /* RichText */; };
+		0ABBF9652B2BE20900656BC7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBF9642B2BE20900656BC7 /* Constants.swift */; };
+		0ABBF9682B2BE2D400656BC7 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBF9672B2BE2D400656BC7 /* Tweet.swift */; };
+		0ABBF96A2B2BE30000656BC7 /* TimeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBF9692B2BE30000656BC7 /* TimeUtil.swift */; };
+		0ABBF96D2B2BE72B00656BC7 /* TweetMetadataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBF96C2B2BE72B00656BC7 /* TweetMetadataView.swift */; };
+		0ABBF96F2B2BE73500656BC7 /* TweetContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBF96E2B2BE73500656BC7 /* TweetContentView.swift */; };
+		0ABBF9712B2BE73E00656BC7 /* TweetFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBF9702B2BE73E00656BC7 /* TweetFooterView.swift */; };
+		0ABBF9742B2C94C300656BC7 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBF9732B2C94C300656BC7 /* ProfileView.swift */; };
+		0ABBF9762B2C950300656BC7 /* RSSFeed+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBF9752B2C950300656BC7 /* RSSFeed+Hashable.swift */; };
+		0ABBF9782B2C953C00656BC7 /* TweetRSSUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBF9772B2C953C00656BC7 /* TweetRSSUtil.swift */; };
+		0ABBF97A2B2C96E400656BC7 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBF9792B2C96E400656BC7 /* ProfileViewModel.swift */; };
+		0ABBF97C2B2C9B9C00656BC7 /* FetchFromUrl+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBF97B2B2C9B9C00656BC7 /* FetchFromUrl+Async.swift */; };
+		0ABBF97F2B2CB4A700656BC7 /* ScalingHeaderScrollView in Frameworks */ = {isa = PBXBuildFile; productRef = 0ABBF97E2B2CB4A700656BC7 /* ScalingHeaderScrollView */; };
+		0ABBF9812B2CB90F00656BC7 /* StringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBF9802B2CB90F00656BC7 /* StringFormatter.swift */; };
+		0ABBF9832B2CD0BC00656BC7 /* TweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBF9822B2CD0BC00656BC7 /* TweetViewModel.swift */; };
+		0ABBF98C2B2E42AC00656BC7 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBF98B2B2E42AC00656BC7 /* ShareViewController.swift */; };
+		0ABBF98F2B2E42AC00656BC7 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ABBF98D2B2E42AC00656BC7 /* MainInterface.storyboard */; };
+		0ABBF9932B2E42AC00656BC7 /* ShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0ABBF9892B2E42AC00656BC7 /* ShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0ABBF9992B2E43B500656BC7 /* DeepLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBF9982B2E43B500656BC7 /* DeepLinkManager.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0ABBF9912B2E42AC00656BC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A3228F72B2B484A006F4115 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0ABBF9882B2E42AC00656BC7;
+			remoteInfo = ShareExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0ABBF9972B2E42AC00656BC7 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0ABBF9932B2E42AC00656BC7 /* ShareExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0A3228FF2B2B484A006F4115 /* Nitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3229022B2B484A006F4115 /* NitterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NitterApp.swift; sourceTree = "<group>"; };
-		0A3229042B2B484A006F4115 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0A3229062B2B484B006F4115 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A3229092B2B484B006F4115 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0A3229132B2B4965006F4115 /* FeedParser+Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedParser+Async.swift"; sourceTree = "<group>"; };
+		0A3229152B2B4995006F4115 /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
+		0A3229172B2B4A90006F4115 /* TimelineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewModel.swift; sourceTree = "<group>"; };
+		0A32291E2B2B8029006F4115 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		0A3229202B2B809A006F4115 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		0A3229222B2B82A3006F4115 /* Nitter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Nitter.entitlements; sourceTree = "<group>"; };
+		0ABBF9642B2BE20900656BC7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0ABBF9672B2BE2D400656BC7 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		0ABBF9692B2BE30000656BC7 /* TimeUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUtil.swift; sourceTree = "<group>"; };
+		0ABBF96C2B2BE72B00656BC7 /* TweetMetadataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetMetadataView.swift; sourceTree = "<group>"; };
+		0ABBF96E2B2BE73500656BC7 /* TweetContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetContentView.swift; sourceTree = "<group>"; };
+		0ABBF9702B2BE73E00656BC7 /* TweetFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetFooterView.swift; sourceTree = "<group>"; };
+		0ABBF9732B2C94C300656BC7 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		0ABBF9752B2C950300656BC7 /* RSSFeed+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RSSFeed+Hashable.swift"; sourceTree = "<group>"; };
+		0ABBF9772B2C953C00656BC7 /* TweetRSSUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetRSSUtil.swift; sourceTree = "<group>"; };
+		0ABBF9792B2C96E400656BC7 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		0ABBF97B2B2C9B9C00656BC7 /* FetchFromUrl+Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FetchFromUrl+Async.swift"; sourceTree = "<group>"; };
+		0ABBF9802B2CB90F00656BC7 /* StringFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFormatter.swift; sourceTree = "<group>"; };
+		0ABBF9822B2CD0BC00656BC7 /* TweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewModel.swift; sourceTree = "<group>"; };
+		0ABBF9842B2CD4EE00656BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0ABBF9892B2E42AC00656BC7 /* ShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ABBF98B2B2E42AC00656BC7 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		0ABBF98E2B2E42AC00656BC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		0ABBF9902B2E42AC00656BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ABBF9982B2E43B500656BC7 /* DeepLinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0A3228FC2B2B484A006F4115 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A3229122B2B4882006F4115 /* FeedKit in Frameworks */,
+				0A3229252B2BA199006F4115 /* RichText in Frameworks */,
+				0A32291B2B2B5849006F4115 /* SwiftSoup in Frameworks */,
+				0ABBF97F2B2CB4A700656BC7 /* ScalingHeaderScrollView in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0ABBF9862B2E42AC00656BC7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				0A3229012B2B484A006F4115 /* Nitter */,
+				0ABBF98A2B2E42AC00656BC7 /* ShareExtension */,
 				0A3229002B2B484A006F4115 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				0A3228FF2B2B484A006F4115 /* Nitter.app */,
+				0ABBF9892B2E42AC00656BC7 /* ShareExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,8 +137,14 @@
 		0A3229012B2B484A006F4115 /* Nitter */ = {
 			isa = PBXGroup;
 			children = (
+				0ABBF9842B2CD4EE00656BC7 /* Info.plist */,
+				0ABBF9722B2C94B900656BC7 /* Profile */,
+				0ABBF96B2B2BE71900656BC7 /* Tweet */,
+				0A3229222B2B82A3006F4115 /* Nitter.entitlements */,
+				0A32291D2B2B8019006F4115 /* More */,
+				0A32291C2B2B800E006F4115 /* Timeline */,
+				0ABBF9662B2BE20E00656BC7 /* Utils */,
 				0A3229022B2B484A006F4115 /* NitterApp.swift */,
-				0A3229042B2B484A006F4115 /* ContentView.swift */,
 				0A3229062B2B484B006F4115 /* Assets.xcassets */,
 				0A3229082B2B484B006F4115 /* Preview Content */,
 			);
@@ -67,6 +159,70 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		0A32291C2B2B800E006F4115 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				0A3229152B2B4995006F4115 /* TimelineView.swift */,
+				0A3229172B2B4A90006F4115 /* TimelineViewModel.swift */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
+		0A32291D2B2B8019006F4115 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				0A32291E2B2B8029006F4115 /* SettingsView.swift */,
+				0A3229202B2B809A006F4115 /* SettingsViewModel.swift */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		0ABBF9662B2BE20E00656BC7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0ABBF9752B2C950300656BC7 /* RSSFeed+Hashable.swift */,
+				0A3229132B2B4965006F4115 /* FeedParser+Async.swift */,
+				0ABBF9642B2BE20900656BC7 /* Constants.swift */,
+				0ABBF9692B2BE30000656BC7 /* TimeUtil.swift */,
+				0ABBF97B2B2C9B9C00656BC7 /* FetchFromUrl+Async.swift */,
+				0ABBF9802B2CB90F00656BC7 /* StringFormatter.swift */,
+				0ABBF9982B2E43B500656BC7 /* DeepLinkManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0ABBF96B2B2BE71900656BC7 /* Tweet */ = {
+			isa = PBXGroup;
+			children = (
+				0ABBF9672B2BE2D400656BC7 /* Tweet.swift */,
+				0ABBF96C2B2BE72B00656BC7 /* TweetMetadataView.swift */,
+				0ABBF96E2B2BE73500656BC7 /* TweetContentView.swift */,
+				0ABBF9702B2BE73E00656BC7 /* TweetFooterView.swift */,
+				0ABBF9772B2C953C00656BC7 /* TweetRSSUtil.swift */,
+				0ABBF9822B2CD0BC00656BC7 /* TweetViewModel.swift */,
+			);
+			path = Tweet;
+			sourceTree = "<group>";
+		};
+		0ABBF9722B2C94B900656BC7 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				0ABBF9732B2C94C300656BC7 /* ProfileView.swift */,
+				0ABBF9792B2C96E400656BC7 /* ProfileViewModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		0ABBF98A2B2E42AC00656BC7 /* ShareExtension */ = {
+			isa = PBXGroup;
+			children = (
+				0ABBF98B2B2E42AC00656BC7 /* ShareViewController.swift */,
+				0ABBF98D2B2E42AC00656BC7 /* MainInterface.storyboard */,
+				0ABBF9902B2E42AC00656BC7 /* Info.plist */,
+			);
+			path = ShareExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +233,40 @@
 				0A3228FB2B2B484A006F4115 /* Sources */,
 				0A3228FC2B2B484A006F4115 /* Frameworks */,
 				0A3228FD2B2B484A006F4115 /* Resources */,
+				0ABBF9972B2E42AC00656BC7 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0ABBF9922B2E42AC00656BC7 /* PBXTargetDependency */,
+			);
+			name = Nitter;
+			packageProductDependencies = (
+				0A3229112B2B4882006F4115 /* FeedKit */,
+				0A32291A2B2B5849006F4115 /* SwiftSoup */,
+				0A3229242B2BA199006F4115 /* RichText */,
+				0ABBF97E2B2CB4A700656BC7 /* ScalingHeaderScrollView */,
+			);
+			productName = Nitter;
+			productReference = 0A3228FF2B2B484A006F4115 /* Nitter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0ABBF9882B2E42AC00656BC7 /* ShareExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0ABBF9942B2E42AC00656BC7 /* Build configuration list for PBXNativeTarget "ShareExtension" */;
+			buildPhases = (
+				0ABBF9852B2E42AC00656BC7 /* Sources */,
+				0ABBF9862B2E42AC00656BC7 /* Frameworks */,
+				0ABBF9872B2E42AC00656BC7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Nitter;
-			productName = Nitter;
-			productReference = 0A3228FF2B2B484A006F4115 /* Nitter.app */;
-			productType = "com.apple.product-type.application";
+			name = ShareExtension;
+			productName = ShareExtension;
+			productReference = 0ABBF9892B2E42AC00656BC7 /* ShareExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -100,6 +281,9 @@
 					0A3228FE2B2B484A006F4115 = {
 						CreatedOnToolsVersion = 15.0;
 					};
+					0ABBF9882B2E42AC00656BC7 = {
+						CreatedOnToolsVersion = 15.0;
+					};
 				};
 			};
 			buildConfigurationList = 0A3228FA2B2B484A006F4115 /* Build configuration list for PBXProject "Nitter" */;
@@ -111,11 +295,18 @@
 				Base,
 			);
 			mainGroup = 0A3228F62B2B484A006F4115;
+			packageReferences = (
+				0A3229102B2B4882006F4115 /* XCRemoteSwiftPackageReference "FeedKit" */,
+				0A3229192B2B5849006F4115 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+				0A3229232B2BA199006F4115 /* XCRemoteSwiftPackageReference "RichText" */,
+				0ABBF97D2B2CB4A700656BC7 /* XCRemoteSwiftPackageReference "ScalingHeaderScrollView" */,
+			);
 			productRefGroup = 0A3229002B2B484A006F4115 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				0A3228FE2B2B484A006F4115 /* Nitter */,
+				0ABBF9882B2E42AC00656BC7 /* ShareExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +321,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0ABBF9872B2E42AC00656BC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ABBF98F2B2E42AC00656BC7 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -137,12 +336,57 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A3229052B2B484A006F4115 /* ContentView.swift in Sources */,
+				0ABBF9762B2C950300656BC7 /* RSSFeed+Hashable.swift in Sources */,
+				0A32291F2B2B8029006F4115 /* SettingsView.swift in Sources */,
+				0ABBF9742B2C94C300656BC7 /* ProfileView.swift in Sources */,
+				0A3229142B2B4965006F4115 /* FeedParser+Async.swift in Sources */,
+				0ABBF97C2B2C9B9C00656BC7 /* FetchFromUrl+Async.swift in Sources */,
+				0A3229182B2B4A90006F4115 /* TimelineViewModel.swift in Sources */,
+				0ABBF9712B2BE73E00656BC7 /* TweetFooterView.swift in Sources */,
 				0A3229032B2B484A006F4115 /* NitterApp.swift in Sources */,
+				0ABBF9652B2BE20900656BC7 /* Constants.swift in Sources */,
+				0ABBF96D2B2BE72B00656BC7 /* TweetMetadataView.swift in Sources */,
+				0ABBF96A2B2BE30000656BC7 /* TimeUtil.swift in Sources */,
+				0A3229162B2B4995006F4115 /* TimelineView.swift in Sources */,
+				0ABBF9782B2C953C00656BC7 /* TweetRSSUtil.swift in Sources */,
+				0ABBF9832B2CD0BC00656BC7 /* TweetViewModel.swift in Sources */,
+				0ABBF9812B2CB90F00656BC7 /* StringFormatter.swift in Sources */,
+				0ABBF9992B2E43B500656BC7 /* DeepLinkManager.swift in Sources */,
+				0A3229212B2B809A006F4115 /* SettingsViewModel.swift in Sources */,
+				0ABBF9682B2BE2D400656BC7 /* Tweet.swift in Sources */,
+				0ABBF97A2B2C96E400656BC7 /* ProfileViewModel.swift in Sources */,
+				0ABBF96F2B2BE73500656BC7 /* TweetContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0ABBF9852B2E42AC00656BC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ABBF98C2B2E42AC00656BC7 /* ShareViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0ABBF9922B2E42AC00656BC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0ABBF9882B2E42AC00656BC7 /* ShareExtension */;
+			targetProxy = 0ABBF9912B2E42AC00656BC7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0ABBF98D2B2E42AC00656BC7 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0ABBF98E2B2E42AC00656BC7 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0A32290B2B2B484B006F4115 /* Debug */ = {
@@ -267,14 +511,19 @@
 		0A32290E2B2B484B006F4115 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Nitter/Nitter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Nitter/Preview Content\"";
 				DEVELOPMENT_TEAM = ZCSG8R58R8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Nitter/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = nitiOS;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -285,7 +534,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.iOSLife.Nitter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iOSLife.nitiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -296,14 +545,19 @@
 		0A32290F2B2B484B006F4115 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Nitter/Nitter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Nitter/Preview Content\"";
 				DEVELOPMENT_TEAM = ZCSG8R58R8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Nitter/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = nitiOS;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -314,8 +568,58 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.iOSLife.Nitter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iOSLife.nitiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0ABBF9952B2E42AC00656BC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZCSG8R58R8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShareExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iOSLife.nitiOS.ShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0ABBF9962B2E42AC00656BC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZCSG8R58R8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShareExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iOSLife.nitiOS.ShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -343,7 +647,74 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		0ABBF9942B2E42AC00656BC7 /* Build configuration list for PBXNativeTarget "ShareExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0ABBF9952B2E42AC00656BC7 /* Debug */,
+				0ABBF9962B2E42AC00656BC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0A3229102B2B4882006F4115 /* XCRemoteSwiftPackageReference "FeedKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nmdias/FeedKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.2;
+			};
+		};
+		0A3229192B2B5849006F4115 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.1;
+			};
+		};
+		0A3229232B2BA199006F4115 /* XCRemoteSwiftPackageReference "RichText" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NuPlay/RichText.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.0;
+			};
+		};
+		0ABBF97D2B2CB4A700656BC7 /* XCRemoteSwiftPackageReference "ScalingHeaderScrollView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/ScalingHeaderScrollView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0A3229112B2B4882006F4115 /* FeedKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A3229102B2B4882006F4115 /* XCRemoteSwiftPackageReference "FeedKit" */;
+			productName = FeedKit;
+		};
+		0A32291A2B2B5849006F4115 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A3229192B2B5849006F4115 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+		0A3229242B2BA199006F4115 /* RichText */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A3229232B2BA199006F4115 /* XCRemoteSwiftPackageReference "RichText" */;
+			productName = RichText;
+		};
+		0ABBF97E2B2CB4A700656BC7 /* ScalingHeaderScrollView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0ABBF97D2B2CB4A700656BC7 /* XCRemoteSwiftPackageReference "ScalingHeaderScrollView" */;
+			productName = ScalingHeaderScrollView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0A3228F72B2B484A006F4115 /* Project object */;
 }

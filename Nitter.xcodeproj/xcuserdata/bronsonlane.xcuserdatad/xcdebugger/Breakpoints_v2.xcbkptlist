@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "B6B40D10-269B-4A02-8D7B-162A1EBCE9C6"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A74602C8-A299-4FB9-8639-FCA616621D8B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Nitter/Timeline/TimelineViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "loadViewData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A74602C8-A299-4FB9-8639-FCA616621D8B - 3ea2b7f330c4b47d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for Nitter.TimelineView.ViewModel.loadViewData() async -&gt; ()"
+                  moduleName = "Nitter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bronsonlane/workspace/iOS/Nitter/Nitter/Timeline/TimelineViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "656">
+               </Location>
+               <Location
+                  uuid = "A74602C8-A299-4FB9-8639-FCA616621D8B - d50576987569c527"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for Nitter.TimelineView.ViewModel.loadViewData() async -&gt; ()"
+                  moduleName = "Nitter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bronsonlane/workspace/iOS/Nitter/Nitter/Timeline/TimelineViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "A74602C8-A299-4FB9-8639-FCA616621D8B - 8e30bf3cfd360c79"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Nitter.TimelineView.ViewModel.loadViewData() async -&gt; ()"
+                  moduleName = "Nitter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bronsonlane/workspace/iOS/Nitter/Nitter/Timeline/TimelineViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
