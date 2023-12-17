@@ -10,15 +10,6 @@
       }
     },
     {
-      "identity" : "richtext",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/NuPlay/RichText.git",
-      "state" : {
-        "revision" : "ff468d18b066ea5838a2d3f9cb572d55b8ebdb11",
-        "version" : "2.3.0"
-      }
-    },
-    {
       "identity" : "scalingheaderscrollview",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/exyte/ScalingHeaderScrollView.git",

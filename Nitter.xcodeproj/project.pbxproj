@@ -17,7 +17,6 @@
 		0A32291B2B2B5849006F4115 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 0A32291A2B2B5849006F4115 /* SwiftSoup */; };
 		0A32291F2B2B8029006F4115 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A32291E2B2B8029006F4115 /* SettingsView.swift */; };
 		0A3229212B2B809A006F4115 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3229202B2B809A006F4115 /* SettingsViewModel.swift */; };
-		0A3229252B2BA199006F4115 /* RichText in Frameworks */ = {isa = PBXBuildFile; productRef = 0A3229242B2BA199006F4115 /* RichText */; };
 		0ABBF9652B2BE20900656BC7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBF9642B2BE20900656BC7 /* Constants.swift */; };
 		0ABBF9682B2BE2D400656BC7 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBF9672B2BE2D400656BC7 /* Tweet.swift */; };
 		0ABBF96A2B2BE30000656BC7 /* TimeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBF9692B2BE30000656BC7 /* TimeUtil.swift */; };
@@ -100,7 +99,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A3229122B2B4882006F4115 /* FeedKit in Frameworks */,
-				0A3229252B2BA199006F4115 /* RichText in Frameworks */,
 				0A32291B2B2B5849006F4115 /* SwiftSoup in Frameworks */,
 				0ABBF97F2B2CB4A700656BC7 /* ScalingHeaderScrollView in Frameworks */,
 			);
@@ -244,7 +242,6 @@
 			packageProductDependencies = (
 				0A3229112B2B4882006F4115 /* FeedKit */,
 				0A32291A2B2B5849006F4115 /* SwiftSoup */,
-				0A3229242B2BA199006F4115 /* RichText */,
 				0ABBF97E2B2CB4A700656BC7 /* ScalingHeaderScrollView */,
 			);
 			productName = Nitter;
@@ -298,7 +295,6 @@
 			packageReferences = (
 				0A3229102B2B4882006F4115 /* XCRemoteSwiftPackageReference "FeedKit" */,
 				0A3229192B2B5849006F4115 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
-				0A3229232B2BA199006F4115 /* XCRemoteSwiftPackageReference "RichText" */,
 				0ABBF97D2B2CB4A700656BC7 /* XCRemoteSwiftPackageReference "ScalingHeaderScrollView" */,
 			);
 			productRefGroup = 0A3229002B2B484A006F4115 /* Products */;
@@ -675,14 +671,6 @@
 				minimumVersion = 2.6.1;
 			};
 		};
-		0A3229232B2BA199006F4115 /* XCRemoteSwiftPackageReference "RichText" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/NuPlay/RichText.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.3.0;
-			};
-		};
 		0ABBF97D2B2CB4A700656BC7 /* XCRemoteSwiftPackageReference "ScalingHeaderScrollView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/exyte/ScalingHeaderScrollView.git";
@@ -703,11 +691,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0A3229192B2B5849006F4115 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
 			productName = SwiftSoup;
-		};
-		0A3229242B2BA199006F4115 /* RichText */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0A3229232B2BA199006F4115 /* XCRemoteSwiftPackageReference "RichText" */;
-			productName = RichText;
 		};
 		0ABBF97E2B2CB4A700656BC7 /* ScalingHeaderScrollView */ = {
 			isa = XCSwiftPackageProductDependency;
