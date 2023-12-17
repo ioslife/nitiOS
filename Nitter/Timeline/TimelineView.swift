@@ -7,7 +7,6 @@
 
 import FeedKit
 import SwiftUI
-import RichText
 
 struct TimelineView: View {
     @StateObject var viewModel: ViewModel
@@ -55,19 +54,6 @@ struct TimelineView: View {
             Divider()
         }
     }
-    
-    
-//                                RichText(html: tweet.details.description!)
-//                                    .lineHeight(150)
-//                                    .imageRadius(12)
-//                                    .foregroundColor(light: Color.primary, dark: .white)
-//                                    .linkColor(light: Color.blue, dark: Color.blue)
-//                                    .linkOpenType(.SFSafariView())
-//                                    .placeholder {
-//                                        Text("Redacted Redacted Redacted Redacted Redacted Redacted Redacted Redacted Redacted Redacted Redacted Redacted Redacted Redacted Redacted")
-//                                            .redacted(reason: .placeholder)
-//                                    }
-//                                    .transition(.easeOut)
     
     struct EmptyFollowingListView: View {
         @StateObject var viewModel: ViewModel
