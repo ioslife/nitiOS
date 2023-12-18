@@ -21,14 +21,7 @@ Timeline             |  Profile
 * No account needed
 
 ## Documentation
-* [Installation](https://github.com/yattee/yattee/wiki/Installation-Instructions)
-* [Building](https://github.com/yattee/yattee/wiki/Building-instructions)
-* [Features](https://github.com/yattee/yattee/wiki/Features)
-* [FAQ](https://github.com/yattee/yattee/wiki/FAQ)
-* [Screenshots Gallery](https://github.com/yattee/yattee/wiki/Screenshots-Gallery)
-* [Tips](https://github.com/yattee/yattee/wiki/Tips)
-* [Integrations](https://github.com/yattee/yattee/wiki/Integrations)
-* [Donations](https://github.com/yattee/yattee/wiki/Donations)
+* Coming soon...
 
 ## Contributing
 If you're interestred in contributing, you can browse the [issues](https://github.com/ioslife/nitiOS/issues) list or create a new one to discuss your feature idea. Every contribution is very welcome.
