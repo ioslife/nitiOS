@@ -12,6 +12,20 @@ struct SettingsView: View {
     
     var body: some View {
         List {
+            Section(header: Text("Current Instance")) {
+                TextField("Instance URL", text: $viewModel.instanceBaseURL)
+                    .autocorrectionDisabled()
+                    .textInputAutocapitalization(.never)
+                Button {
+                    viewModel.updateInstanceURL()
+                } label: {
+                    HStack {
+                        Spacer()
+                        Text("Save")
+                        Spacer()
+                    }
+                }
+            }
             Section(header: Text("Followed Users")) {
                 if (viewModel.subscribedFeeds.count == 0) {
                     Text("You aren't currently following anyone.")
@@ -49,6 +63,13 @@ struct SettingsView: View {
                                 .fontWeight(.heavy)
                         }
                     }
+                }
+                .alert("Instance Updated", isPresented: $viewModel.showingConfirmationDialog) {
+                    HStack {
+                        Button("Dismiss", role: .cancel) { }
+                    }
+                } message: {
+                    Text("The instance has been updated to \(Constants.instanceBaseURL). If it does not work, ensure this instance supports RSS feeds.")
                 }
             }
         }

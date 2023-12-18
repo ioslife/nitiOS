@@ -35,6 +35,9 @@
 		0ABBF98F2B2E42AC00656BC7 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ABBF98D2B2E42AC00656BC7 /* MainInterface.storyboard */; };
 		0ABBF9932B2E42AC00656BC7 /* ShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0ABBF9892B2E42AC00656BC7 /* ShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0ABBF9992B2E43B500656BC7 /* DeepLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBF9982B2E43B500656BC7 /* DeepLinkManager.swift */; };
+		0ABBF99C2B2E74D900656BC7 /* LazyPager in Frameworks */ = {isa = PBXBuildFile; productRef = 0ABBF99B2B2E74D900656BC7 /* LazyPager */; };
+		0ABBF99F2B2F76D400656BC7 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBF99E2B2F76D400656BC7 /* SearchView.swift */; };
+		0ABBF9A12B2F793D00656BC7 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBF9A02B2F793D00656BC7 /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,8 @@
 		0ABBF98E2B2E42AC00656BC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		0ABBF9902B2E42AC00656BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0ABBF9982B2E43B500656BC7 /* DeepLinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkManager.swift; sourceTree = "<group>"; };
+		0ABBF99E2B2F76D400656BC7 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		0ABBF9A02B2F793D00656BC7 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ABBF99C2B2E74D900656BC7 /* LazyPager in Frameworks */,
 				0A3229122B2B4882006F4115 /* FeedKit in Frameworks */,
 				0A32291B2B2B5849006F4115 /* SwiftSoup in Frameworks */,
 				0ABBF97F2B2CB4A700656BC7 /* ScalingHeaderScrollView in Frameworks */,
@@ -135,12 +141,13 @@
 		0A3229012B2B484A006F4115 /* Nitter */ = {
 			isa = PBXGroup;
 			children = (
+				0A3229222B2B82A3006F4115 /* Nitter.entitlements */,
 				0ABBF9842B2CD4EE00656BC7 /* Info.plist */,
+				0A32291C2B2B800E006F4115 /* Timeline */,
 				0ABBF9722B2C94B900656BC7 /* Profile */,
 				0ABBF96B2B2BE71900656BC7 /* Tweet */,
-				0A3229222B2B82A3006F4115 /* Nitter.entitlements */,
+				0ABBF99D2B2F76B600656BC7 /* Search */,
 				0A32291D2B2B8019006F4115 /* More */,
-				0A32291C2B2B800E006F4115 /* Timeline */,
 				0ABBF9662B2BE20E00656BC7 /* Utils */,
 				0A3229022B2B484A006F4115 /* NitterApp.swift */,
 				0A3229062B2B484B006F4115 /* Assets.xcassets */,
@@ -221,6 +228,15 @@
 			path = ShareExtension;
 			sourceTree = "<group>";
 		};
+		0ABBF99D2B2F76B600656BC7 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				0ABBF99E2B2F76D400656BC7 /* SearchView.swift */,
+				0ABBF9A02B2F793D00656BC7 /* SearchViewModel.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -243,6 +259,7 @@
 				0A3229112B2B4882006F4115 /* FeedKit */,
 				0A32291A2B2B5849006F4115 /* SwiftSoup */,
 				0ABBF97E2B2CB4A700656BC7 /* ScalingHeaderScrollView */,
+				0ABBF99B2B2E74D900656BC7 /* LazyPager */,
 			);
 			productName = Nitter;
 			productReference = 0A3228FF2B2B484A006F4115 /* Nitter.app */;
@@ -296,6 +313,7 @@
 				0A3229102B2B4882006F4115 /* XCRemoteSwiftPackageReference "FeedKit" */,
 				0A3229192B2B5849006F4115 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
 				0ABBF97D2B2CB4A700656BC7 /* XCRemoteSwiftPackageReference "ScalingHeaderScrollView" */,
+				0ABBF99A2B2E74D900656BC7 /* XCRemoteSwiftPackageReference "LazyPager" */,
 			);
 			productRefGroup = 0A3229002B2B484A006F4115 /* Products */;
 			projectDirPath = "";
@@ -332,6 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ABBF9A12B2F793D00656BC7 /* SearchViewModel.swift in Sources */,
 				0ABBF9762B2C950300656BC7 /* RSSFeed+Hashable.swift in Sources */,
 				0A32291F2B2B8029006F4115 /* SettingsView.swift in Sources */,
 				0ABBF9742B2C94C300656BC7 /* ProfileView.swift in Sources */,
@@ -342,6 +361,7 @@
 				0A3229032B2B484A006F4115 /* NitterApp.swift in Sources */,
 				0ABBF9652B2BE20900656BC7 /* Constants.swift in Sources */,
 				0ABBF96D2B2BE72B00656BC7 /* TweetMetadataView.swift in Sources */,
+				0ABBF99F2B2F76D400656BC7 /* SearchView.swift in Sources */,
 				0ABBF96A2B2BE30000656BC7 /* TimeUtil.swift in Sources */,
 				0A3229162B2B4995006F4115 /* TimelineView.swift in Sources */,
 				0ABBF9782B2C953C00656BC7 /* TweetRSSUtil.swift in Sources */,
@@ -679,6 +699,14 @@
 				minimumVersion = 1.1.0;
 			};
 		};
+		0ABBF99A2B2E74D900656BC7 /* XCRemoteSwiftPackageReference "LazyPager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gh123man/LazyPager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.5;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -696,6 +724,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0ABBF97D2B2CB4A700656BC7 /* XCRemoteSwiftPackageReference "ScalingHeaderScrollView" */;
 			productName = ScalingHeaderScrollView;
+		};
+		0ABBF99B2B2E74D900656BC7 /* LazyPager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0ABBF99A2B2E74D900656BC7 /* XCRemoteSwiftPackageReference "LazyPager" */;
+			productName = LazyPager;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

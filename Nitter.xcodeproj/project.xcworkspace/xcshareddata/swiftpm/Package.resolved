@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "lazypager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/gh123man/LazyPager",
+      "state" : {
+        "revision" : "bf7dbb392f972bc04a2622615c5878252ba628ec",
+        "version" : "1.0.5"
+      }
+    },
+    {
       "identity" : "scalingheaderscrollview",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/exyte/ScalingHeaderScrollView.git",

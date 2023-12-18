@@ -46,12 +46,20 @@ struct AppShellView: View {
             }
             
             NavigationStack {
+                SearchView(viewModel: SearchView.ViewModel())
+            }
+            .tabItem {
+                Label("Search", systemImage: "magnifyingglass")
+            }
+            .tag("Two")
+            
+            NavigationStack {
                 SettingsView(viewModel: SettingsView.ViewModel())
             }
             .tabItem {
                 Label("Settings", systemImage: "gear")
             }
-            .tag("Two")
+            .tag("Three")
         }
     }
 }

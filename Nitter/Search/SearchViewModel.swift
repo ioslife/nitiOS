@@ -1,21 +1,17 @@
 //
-//  FeedKitViewModel.swift
+//  SearchViewModel.swift
 //  Nitter
 //
-//  Created by Bronson Lane on 12/14/23.
+//  Created by Bronson Lane on 12/17/23.
 //
 
 import FeedKit
 import SwiftUI
 import SwiftSoup
 
-extension TimelineView {
+extension SearchView {
     @MainActor class ViewModel: ObservableObject {
-        var subscribedFeeds = UserDefaults.standard.object(forKey: "subscribedFeeds") as? [String] ?? [String]()
-        var profileUsername: String
-        
-        init(profileUsername: String = "", searchText: String = "", searchType: String = "tweets") {
-            self.profileUsername = profileUsername
+        init(searchText: String = "", searchType: String = "tweets") {
             self.searchText = searchText
             self.searchType = searchType
         }
@@ -23,49 +19,32 @@ extension TimelineView {
         @Published var feeds: [Feed] = []
         @Published var tweets: [Tweet] = []
         
-        @Published var parsedCount: Int = 0
-        
         @Published var isLoading: Bool = true
         @Published var isRefreshing: Bool = false
         
-        @Published var showingSearchAlert: Bool = false
-        @Published var searchUsername: String = ""
-        
         @Published var searchText: String = ""
         @Published var searchType: String = ""
+        @Published var isSearching: Bool = false
         
-        func loadViewData() async {
-            if self.isRefreshing || feeds.count == 0 {
-                self.isLoading = true
-                if profileUsername != "" {
-                    self.feeds = await self.getFeeds(for: [URL(string: "\(Constants.instanceHTTPS)/\(profileUsername)/rss")!])
-                } else if searchText != "" {
-                    self.feeds = await self.getFeeds(for: [URL(string: "\(Constants.instanceHTTPS)/search/rss?f=\(searchType)&q=\(searchText)")!])
-                } else {
-                    self.feeds = await self.getFeeds(for: getFollowedUsers())
+        func search() async {
+            if self.searchText == "" {
+                self.isSearching = false
+            } else {
+                self.tweets = []
+                self.feeds = []
+                self.isSearching = true
+                if self.isRefreshing || feeds.count == 0 {
+                    self.isLoading = true
+                    if searchText != "" {
+                        self.feeds = await self.getFeeds(for: [URL(string: "\(Constants.instanceHTTPS)/search/rss?f=\(searchType)&q=\(searchText)")!])
+                    }
                 }
-                self.parsedCount = feeds.count
             }
-        }
-        
-        //Search URL
-//                URL(string: "https://nitter.1d4.us/search/rss?q=%23Braves")!
-        
-        
-        func getFollowedUsers() -> [URL] {
-            subscribedFeeds = UserDefaults.standard.object(forKey: "subscribedFeeds") as? [String] ?? [String]()
-            var followedUsers: [URL] = []
-            for username in subscribedFeeds {
-                followedUsers.append(URL(string: "\(Constants.instanceHTTPS)/\(username)/rss")!)
-            }
-            
-            return followedUsers
         }
         
         func getTweets() -> [Tweet] {
             return tweets.sorted(by: { $0.details.pubDate! > $1.details.pubDate! })
         }
-        
         
         func getImagesFromTweet(tweet: String) -> [String?] {
             do {
@@ -104,14 +83,12 @@ extension TimelineView {
                         
                         for item in feed.rssFeed!.items! {
                             if !tweets.contains(where: { $0.details.guid == item.guid }) {
-                                let author = feed.rssFeed!.title!.split(separator: "/")
-                                
                                 if isRetweet(string: item.title!) {
                                     item.description! = prependRetweetText(tweet: item)
-                                    tweets.insert(Tweet(details: item, profilePicURL: feed.rssFeed!.image!.url!, authorName: String(author.first!), authorUsername: String(author.last!)), at: 0)
-                                } else {
-                                    tweets.insert(Tweet(details: item, profilePicURL: feed.rssFeed!.image!.url!, authorName: String(author.first!), authorUsername: String(author.last!)), at: 0)
+                                } else if isReply(string: item.title!) {
+                                    item.description! = prependReplyText(tweet: item)
                                 }
+                                tweets.insert(Tweet(details: item, profilePicURL: feed.rssFeed!.image?.url ?? "", authorName: "", authorUsername: item.dublinCore!.dcCreator!), at: 0)
                            }
                         }
                     }
@@ -122,20 +99,32 @@ extension TimelineView {
             return taskResult
         }
         
-        func prependRetweetText(tweet: RSSFeedItem) -> String {
-            return "RT from <a href='nitios://\(tweet.dublinCore!.dcCreator!.replacingOccurrences(of: "@", with: ""))'>\(tweet.dublinCore!.dcCreator!)</a>: \(tweet.description!)"
-        }
-        
         func isRetweet(string: String) -> Bool {
             return string.hasPrefix("RT")
         }
         
-        func followUser() {
-            subscribedFeeds.append(self.searchUsername)
-            UserDefaults.standard.set(subscribedFeeds, forKey: "subscribedFeeds")
-            searchUsername = ""
+        func prependRetweetText(tweet: RSSFeedItem) -> String {
+            return "RT from <a href='nitios://\(tweet.dublinCore!.dcCreator!.replacingOccurrences(of: "@", with: ""))'>\(tweet.dublinCore!.dcCreator!)</a>: \(tweet.description!)"
+        }
+        
+        func isReply(string: String) -> Bool {
+            return string.hasPrefix("R to @")
+        }
+        
+        func prependReplyText(tweet: RSSFeedItem) -> String {
+            let replyToUser: String = getTextBetweenAtAndColon(string: tweet.title!)!
+            return "Replying to <a href='nitios://\(replyToUser)'>@\(replyToUser)</a>: \(tweet.description!)"
+        }
+        
+        func getTextBetweenAtAndColon(string: String) -> String? {
+            let range = string.range(of: "@")
+            if let range = range {
+                let start = string.index(after: range.lowerBound)
+                if let colonRange = string.range(of: ":", range: start..<string.endIndex) {
+                    return String(string[start..<colonRange.lowerBound])
+                }
+            }
+            return nil
         }
     }
 }
-
-

@@ -7,6 +7,7 @@
 
 import FeedKit
 import SwiftUI
+import LazyPager
 
 struct TimelineView: View {
     @StateObject var viewModel: ViewModel

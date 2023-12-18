@@ -8,7 +8,13 @@
 import Foundation
 
 class Constants {
-    static var instanceBaseURL = "nitter.x86-64-unknown-linux-gnu.zip"
+    static var instanceBaseURL = UserDefaults.standard.object(forKey: "instanceBaseURL") as? String ?? "nitter.x86-64-unknown-linux-gnu.zip"
     static var instanceHTTPS = "https://\(instanceBaseURL)"
     static var instanceHTTP = "http://\(instanceBaseURL)"
+    
+    static func updateConstants(instanceBaseURL: String) {
+        Constants.instanceBaseURL = instanceBaseURL
+        Constants.instanceHTTPS = "https://\(instanceBaseURL)"
+        Constants.instanceHTTP = "http://\(instanceBaseURL)"
+    }
 }
