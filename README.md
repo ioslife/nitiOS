@@ -26,7 +26,7 @@ Timeline             |  Profile
 ## Contributing
 If you're interestred in contributing, you can browse the [issues](https://github.com/ioslife/nitiOS/issues) list or create a new one to discuss your feature idea. Every contribution is very welcome.
 
-You can contact iOSLife on [Mastodon](https://techhub.social/iOSLife)
+You can contact iOSLife on [Mastodon](https://techhub.social/@iOSLife)
 
 ## License
 nitiOS and its components is shared on [AGPL v3](https://www.gnu.org/licenses/agpl-3.0.en.html) license.
