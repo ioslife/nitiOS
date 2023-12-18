@@ -8,8 +8,11 @@
 [![GitHub issues](https://img.shields.io/github/issues/ioslife/nitiOS)](https://github.com/ioslife/nitiOS/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/ioslife/nitiOS)](https://github.com/ioslife/nitiOS/pulls)
 
-![Screenshot-Timeline](https://github.com/ioslife/nitiOS/blob/main/Screenshots/Timeline.jpeg)
-![Screenshot-Profile](https://github.com/ioslife/nitiOS/blob/main/Screenshots/Profile.jpeg)
+Timeline             |  Profile
+:-------------------------:|:-------------------------:
+![Screenshot-Timeline](https://github.com/ioslife/nitiOS/blob/main/Screenshots/Timeline.jpeg)  |  ![Screenshot-Profile](https://github.com/ioslife/nitiOS/blob/main/Screenshots/Profile.jpeg)
+
+
 </div>
 
 ## Features
