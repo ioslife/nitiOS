@@ -20,6 +20,9 @@ Timeline             |  Profile
 * Follow and unfollow users on Nitter
 * No account needed
 
+## Installation
+* [TestFlight](https://testflight.apple.com/join/60zUXzcL)
+
 ## Documentation
 * Coming soon...
 
